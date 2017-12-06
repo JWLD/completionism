@@ -1,0 +1,41 @@
+@import url('master.css');
+
+body {
+	flex-direction: column;
+	height: 100vh;
+	margin: 0;
+	background-color: #222;
+}
+
+#header {
+	height: 62px;
+	width: 100%;
+	color: white;
+	background-color: #666;
+	font: 3vh KGSmooth;
+	text-transform: uppercase;
+}
+
+#notHeader {
+	flex-grow: 1;
+}
+
+#updateForm {
+	flex-direction: column;
+	padding: 5px;
+	background-color: gray;
+	font: 16px Helvetica;
+}
+
+input, select, input[type=submit], #fileLabel {
+	height: 40px;
+	width: calc(100% - 10px);
+	margin: 5px;
+	font: 16px Helvetica;
+	border-radius: 5px;
+	background-color: white;
+}
+
+input[type="file"] {
+	display: none;
+}

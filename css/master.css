@@ -1,0 +1,89 @@
+/*** GLOBALS ***/
+
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font: inherit;
+	box-sizing: border-box;
+}
+
+body, section, div, button, label, form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button:hover, label:hover {
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*** FONTS ***/
+
+@font-face {
+	font-family: CreativeR;
+	src: url("../fonts/CREABBRG.ttf");
+}
+
+@font-face {
+	font-family: KGSmooth;
+	src: url("../fonts/KGSummerStormSmooth.ttf");
+}
+
+@font-face {
+	font-family: Simplifica;
+	src: url("../fonts/simplifica.ttf");
+}
+
+@font-face {
+	font-family: Dense;
+	src: url("../fonts/dense.otf");
+}
+
+/*** MESSAGE BOX ***/
+
+#msgBox {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	z-index: 1;
+
+	min-height: 50px;
+	min-width: 250px;
+
+	padding: 15px;
+	border: 5px solid white;
+
+    background-color: rgba(34, 34, 34, 0.9);
+	color: white;
+
+	font: 17px Arial;
+	text-align: center;
+	line-height: 150%;
+
+	transition: opacity 0.25s;
+	visibility: hidden;
+}
+
+#msgBox.show {
+	visibility: visible;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
